@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "yt-pb-calc chromium mv3",
+  "author": "kurtnettle (Chrome Port by Jecobe)",
+  "description": "Get to know the video duration for different playback speed in Youtube. Now on Chrome.",
+  "version": "1.4",
+  "icons": {
+    "48": "img/icon48.png",
+    "96": "img/icon96.png",
+    "128": "img/icon128.png"
+    },
+    "content_scripts": [
+      {
+        "js": [
+          "./js/main.js"
+        ],
+        "matches": [
+          "*://*.youtube.com/*"
+        ],
+        "run_at": "document_idle"
+      }
+    ],
+    "permissions": [
+      "activeTab"
+    ]
+}
